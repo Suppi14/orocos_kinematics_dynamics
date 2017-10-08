@@ -43,6 +43,7 @@ using namespace Eigen;
 ChainIdSolver_Vereshchagin::ChainIdSolver_Vereshchagin(const Chain& chain_, Twist root_acc, unsigned int _nc) :
     chain(chain_), nj(chain.getNrOfJoints()), ns(chain.getNrOfSegments()), nc(_nc),
     results(ns + 1, segment_info(nc))
+    //nc ---number of constraints???
 {
     acc_root = root_acc;
 
@@ -259,11 +260,12 @@ void ChainIdSolver_Vereshchagin::downwards_sweep(const Jacobian& alfa, const Jnt
 
             //u=(Q-Z(R+PC)=sum of external forces along the joint axes,
             //R are the forces comming from the children,
-            //Q is taken zero (do we need to take the previous calculated torques?
+            //Q is taken zero (do we need to take the previous calculated torques?   //maybe for us it friction input ???
 
             //projection of coriolis and centrepital forces into joint subspace (0 0 Z)
             s.totalBias = -dot(s.Z, s.R + s.PC);
             s.u = torques(j) + s.totalBias;
+            //here in torques we can give our forces for friction??????
 
             //Matrix form of Z, put rotations above translations
             Vector6d vZ;
