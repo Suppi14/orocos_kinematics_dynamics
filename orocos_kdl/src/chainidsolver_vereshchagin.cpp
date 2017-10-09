@@ -27,6 +27,7 @@
  * for a chain. This class creates instance of hybrid dynamics solver.
  * The solver calculates total joint space accelerations in a chain when a constraint force(s) is applied
  * to the chain's end-effector (task space/cartesian space).
+ * Not only to end-effector, but also on any of the segments?????
  */
 
 namespace KDL
