@@ -21,33 +21,33 @@
 
 using namespace KDL;
 
-class SolverTest : public CppUnit::TestFixture
+class VerSolverTest : public CppUnit::TestFixture
 {
-    CPPUNIT_TEST_SUITE( SolverTest);
-    CPPUNIT_TEST(FkPosAndJacTest );
-    CPPUNIT_TEST(FkVelAndJacTest );
-    CPPUNIT_TEST(FkVelAndIkVelTest );
-    CPPUNIT_TEST(FkPosAndIkPosTest );
+    CPPUNIT_TEST_SUITE( VerSolverTest);
+    // CPPUNIT_TEST(FkPosAndJacTest );
+    // CPPUNIT_TEST(FkVelAndJacTest );
+    // CPPUNIT_TEST(FkVelAndIkVelTest );
+    // CPPUNIT_TEST(FkPosAndIkPosTest );
     CPPUNIT_TEST(VereshchaginTest );
-    CPPUNIT_TEST(IkSingularValueTest );
-    CPPUNIT_TEST(IkVelSolverWDLSTest );
-    CPPUNIT_TEST(FkPosVectTest );
-    CPPUNIT_TEST(FkVelVectTest );
+    // CPPUNIT_TEST(IkSingularValueTest );
+    // CPPUNIT_TEST(IkVelSolverWDLSTest );
+    // CPPUNIT_TEST(FkPosVectTest );
+    // CPPUNIT_TEST(FkVelVectTest );
     CPPUNIT_TEST_SUITE_END();
 
 public:
     void setUp();
     void tearDown();
 
-    void FkPosAndJacTest();
-    void FkVelAndJacTest();
-    void FkVelAndIkVelTest();
-    void FkPosAndIkPosTest();
-    void VereshchaginTest();
-    void IkSingularValueTest() ;
-    void IkVelSolverWDLSTest();
-    void FkPosVectTest();
-    void FkVelVectTest();
+    //void FkPosAndJacTest();
+    //void FkVelAndJacTest();
+    // void FkVelAndIkVelTest();
+    // void FkPosAndIkPosTest();
+     void VereshchaginTest();
+    // void IkSingularValueTest() ;
+    // void IkVelSolverWDLSTest();
+    // void FkPosVectTest();
+    // void FkVelVectTest();
 
 private:
 
